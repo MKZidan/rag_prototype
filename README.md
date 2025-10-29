@@ -61,6 +61,22 @@ copy .env.example .env
 
 - Fill in the real values in `.env`. This repo already includes a `.gitignore` entry for `.env` so your secrets won't be committed.
 
+### API keys (OpenAI / OpenRouter)
+
+The project may call external model APIs for generation and embeddings. You should add one of the following keys to your local `.env` (do not commit these values):
+
+- For OpenAI's API (api.openai.com):
+
+```env
+OPEN_ROUTER_API_KEY=sk-...your-openai-key...
+```
+
+- For OpenRouter (proxy to other models):
+
+```env
+OPEN_ROUTER_API_KEY=sk-...your-open-router-api-key...
+```
+
 ## Connect to the database from host (psql)
 To test from the host machine (PowerShell) using `psql`:
 
